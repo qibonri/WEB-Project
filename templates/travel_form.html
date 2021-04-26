@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="px-4 pt-0 pb-4 bg-light" style="margin-top: 20px">
+    <h2 align="center">Создание путешествия</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Название</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="headline">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Описание</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="description"></textarea>
+
+        <div class="form-group" style="margin-top: 20px">
+            <label for="exampleFormControlInput2" data-toggle="tooltip" data-placement="right"
+                   title="1.Заходим на карту (Google, Яндекс)
+2.Ставим наше место на конечную точку, а начальную оставлем пустой
+3.Копируем URL данной страницы">Ссылка
+                на карту</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" name="route">
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить
+        </button>
+    </form>
+</div>
+{% endblock %}
